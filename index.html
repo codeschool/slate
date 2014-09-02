@@ -445,28 +445,39 @@ that each Path returned.
 <table><thead>
 <tr>
 <th>Error Code</th>
+<th>Status</th>
 <th>Meaning</th>
 </tr>
 </thead><tbody>
 <tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>Malformed request syntax.</td>
+</tr>
+<tr>
 <td>401</td>
-<td>Unauthorized &ndash; Wrong or missing OAuth token (see <a href="#authentication">Authentication</a>)</td>
+<td>Unauthorized</td>
+<td>Wrong or missing OAuth token</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found &ndash; The resource you&rsquo;re trying to fetch doesn&rsquo;t exist</td>
+<td>Not Found</td>
+<td>The resource you&rsquo;re trying to fetch doesn&rsquo;t exist</td>
 </tr>
 <tr>
 <td>406</td>
-<td>Not Acceptable &ndash; You requested a format we don&rsquo;t return, we only return JSON.</td>
+<td>Not Acceptable</td>
+<td>You requested a format we don&rsquo;t return, we only return JSON.</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
+<td>Internal Server Error</td>
+<td>We had a problem with our server. Try again later.</td>
 </tr>
 <tr>
 <td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintenance. Please try again later.</td>
+<td>Service Unavailable</td>
+<td>We&rsquo;re temporarially offline for maintenance. Try again later.</td>
 </tr>
 </tbody></table>
 
