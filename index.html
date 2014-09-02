@@ -79,17 +79,17 @@ You must replace <code class="prettyprint">poopoopoo</code> with your personal A
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="p">{</span><span class="w"> </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W3To8xgVLWa44ykvL6QisB0fvoP4fDEpJmAuFgwh"</span><span class="w"> </span><span class="p">}</span><span class="w">
+<pre class="highlight json"><span class="p">{</span><span class="w"> </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W3To8xgVLWa44ykvL6QisB0fvoP4fDEpJmAuFgwh"</span><span class="w"> </span><span class="p">}</span><span class="w">
 </span></pre>
 
-<p>This <code class="prettyprint">auth_token</code> is an OAuth Token you can use to make queries on
+<p>This <code class="prettyprint">token</code> is an OAuth Token you can use to make queries on
 behalf of the user — for instance to the Course API in order to obtain
 course videos only accessible to paying users.</p>
 <h1 id='users'>Users</h1><h2 id='get-a-single-user'>Get a Single User</h2>
-<p>Given an <code class="prettyprint">auth_token</code> you obtain from using the Authentication endpoint,
+<p>Given a <code class="prettyprint">token</code> you obtain from using the Authentication endpoint,
 you can query the User endpoint in order to obtain data about this user.</p>
 <pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/user"</span>
-  -H <span class="s2">"Authorization: OAuth authtokenfromauthenticationendpoint"</span>
+  -H <span class="s2">"Authorization: OAuth token_from_authentication_endpoint"</span>
 </pre>
 
 <blockquote>
