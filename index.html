@@ -89,6 +89,15 @@ course videos only accessible to paying users.</p>
 You still need to send an <a href="#authorization"><code class="prettyprint">Authorization</code> header</a>
 including an OAuth token when making requests to the Authentication API.
 </aside></p>
+
+<p>Note that a <code class="prettyprint">422 — Unprocessable Entity</code> status code will be returned in
+the following cases:
+- no credential parameters were sent
+- the password doesn&rsquo;t match the login being sent</p>
+
+<p>The purpose is to avoid leaking existing user emails and usernames through
+the API endpoint. That said, we currently leak this information through
+JavaScript validation on the website account sign up form.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code class="prettyprint">POST https://www.codeschool.com/api/v1/authentication</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
