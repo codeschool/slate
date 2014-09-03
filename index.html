@@ -43,9 +43,11 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
+        
+          <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the Code School API. You can use our API to access Code School API endpoints for Paths, Courses, and individual Users.</p>
-<h1 id='authorization'>Authorization</h1>
+
+          <h1 id='authorization'>Authorization</h1>
 <blockquote>
 <p>To authorize you&rsquo;ll need an OAuth token:</p>
 </blockquote>
@@ -68,7 +70,8 @@ curl <span class="s2">"api_endpoint_here"</span>
 <p><aside class="notice">
 You must replace <code class="prettyprint">poopoopoo</code> with your personal API key.
 </aside></p>
-<h1 id='authentication'>Authentication</h1><h2 id='authenticate-a-user'>Authenticate a user</h2>
+
+          <h1 id='authentication'>Authentication</h1><h2 id='authenticate-a-user'>Authenticate a user</h2>
 <p>Given a user whose username is <code class="prettyprint">json_vanlue</code> and password is <code class="prettyprint">brandingmatters</code>.</p>
 <pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/authenticate"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
@@ -119,7 +122,8 @@ JavaScript validation on the website account sign up form.</p>
 <td>The password of the user to authenticate</td>
 </tr>
 </tbody></table>
-<h1 id='users'>Users</h1><h2 id='get-a-single-user'>Get a Single User</h2>
+
+          <h1 id='users'>Users</h1><h2 id='get-current-user'>Get current User</h2>
 <p>Given a <code class="prettyprint">token</code> you obtain from using the Authentication endpoint,
 you can query the User endpoint in order to obtain data about this user.</p>
 <pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/user"</span>
@@ -140,12 +144,30 @@ you can query the User endpoint in order to obtain data about this user.</p>
 </span><span class="p">}</span><span class="w">
 </span></pre>
 
-<p>This endpoint retrieves a single User.</p>
+<p>This endpoint retrieves the current User.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code class="prettyprint">GET https://www.codeschool.com/api/v1/user</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <p>None.</p>
-<h1 id='paths'>Paths</h1><h2 id='get-all-paths'>Get All Paths</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/paths.json"</span>
+<h2 id='reset-password-for-a-user'>Reset Password for a User</h2>
+<p>Given a <code class="prettyprint">login</code> which could either be the user&rsquo;s <code class="prettyprint">username</code> or the
+<code class="prettyprint">email</code> address associated with their account.</p>
+<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users/&lt;username&gt;/reset_password"</span>
+  -d
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+</pre>
+
+<blockquote>
+<p>The above command doesn&rsquo;t return any body.</p>
+</blockquote>
+
+<p>This endpoint sends a reset password to a single User.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">POST https://www.codeschool.com/api/v1/users/&lt;username&gt;/reset_password</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<p>None.</p>
+
+          <h1 id='paths'>Paths</h1><h2 id='get-all-paths'>Get All Paths</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/paths.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
 </pre>
 
@@ -201,7 +223,8 @@ you can query the User endpoint in order to obtain data about this user.</p>
 The Path endpoint doesn&rsquo;t return nested course data. You&rsquo;ll need to query the Courses endpoint using the course IDs
 that each Path returned.
 </aside></p>
-<h1 id='courses'>Courses</h1><h2 id='get-all-courses'>Get All Courses</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/courses.json"</span>
+
+          <h1 id='courses'>Courses</h1><h2 id='get-all-courses'>Get All Courses</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/courses.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
 </pre>
 
