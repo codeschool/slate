@@ -464,6 +464,33 @@ that each Path returned.
 </tr>
 </tbody></table>
 
+          <h1 id='caching'>Caching</h1>
+<p>Certain endpoints can returned cached responses for your client to avoid
+downloading the entire response again if it hasn&rsquo;t changed since you
+last requested it.</p>
+
+<p>This is commonly called Conditional GET and is based on two response headers:
+- <code class="prettyprint">Last-Modified</code>
+- <code class="prettyprint">ETag</code></p>
+
+<p>These headers are sent back with every cacheable endpoint response.</p>
+
+<p>If you store their values locally on the client-side and send them back
+as the following request headers in any subsequent request, you may
+will a response with the <code class="prettyprint">304 - Not Modified</code> status code and no body
+if the response has not changed since your previous request:
+- <code class="prettyprint">If-Modified-Since</code>
+- <code class="prettyprint">If-None-Match</code></p>
+
+<p><aside class="warning"> The value returned inside the <code class="prettyprint">ETag</code> header is
+a quoted string containing random numbers and letters (the entity tag).
+You <strong>must</strong> send it back as a quoted string within the <code class="prettyprint">If-None-Match</code>
+request header for the conditional GET request to be valid.
+</aside></p>
+
+<p>You may send either (or both) of these conditional GET headers in order
+to attempt to receive a cached response.</p>
+
           <h1 id='errors'>Errors</h1>
 <p>The Code School API uses the following error codes:</p>
 
