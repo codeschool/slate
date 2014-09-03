@@ -152,7 +152,7 @@ you can query the User endpoint in order to obtain data about this user.</p>
 <h2 id='reset-password-for-a-user'>Reset Password for a User</h2>
 <p>Given a <code class="prettyprint">login</code> which could either be the user&rsquo;s <code class="prettyprint">username</code> or the
 <code class="prettyprint">email</code> address associated with their account.</p>
-<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users/&lt;username&gt;/reset_password"</span>
+<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users/&lt;login&gt;/reset_password"</span>
   -d
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
 </pre>
