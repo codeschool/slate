@@ -13,7 +13,7 @@
 
       <script>
         $(function() {
-          setupLanguages(["shell","ruby"]);
+          setupLanguages(["shell"]);
         });
       </script>
   </head>
@@ -29,7 +29,6 @@
       <img width="230" height="52" src="images/logo.png" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -85,6 +84,29 @@ You must replace <code class="prettyprint">poopoopoo</code> with your personal A
 <p>This <code class="prettyprint">token</code> is an OAuth Token you can use to make queries on
 behalf of the user — for instance to the Course API in order to obtain
 course videos only accessible to paying users.</p>
+
+<p><aside class="notice">
+You still need to send an <a href="#authorization"><code class="prettyprint">Authorization</code> header</a>
+including an OAuth token when making requests to the Authentication API.
+</aside></p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">POST https://www.codeschool.com/api/v1/authentication</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>login</td>
+<td>The username or email of the user to authenticate</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The password of the user to authenticate</td>
+</tr>
+</tbody></table>
 <h1 id='users'>Users</h1><h2 id='get-a-single-user'>Get a Single User</h2>
 <p>Given a <code class="prettyprint">token</code> you obtain from using the Authentication endpoint,
 you can query the User endpoint in order to obtain data about this user.</p>
@@ -159,7 +181,7 @@ you can query the User endpoint in order to obtain data about this user.</p>
 
 <p>This endpoint retrieves all Paths.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code class="prettyprint">GET https://www.codeschool.com/api/v1/paths.json</code></p>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v1/paths</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <p>None.</p>
 
@@ -423,7 +445,7 @@ that each Path returned.
 
 <p>This endpoint retrieves all Courses.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code class="prettyprint">GET https://www.codeschool.com/api/v1/courses.json</code></p>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v1/courses</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -490,7 +512,6 @@ that each Path returned.
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
           </div>
       </div>
     </div>
