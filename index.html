@@ -188,7 +188,17 @@ you can query the User endpoint in order to obtain data about this user.</p>
 <tr>
 <td>user[password]</td>
 <td>Yes</td>
-<td>The prospective user&rsquo;s password (must be longer than 6 characters).</td>
+<td>The requested password (must be longer than 6 characters).</td>
+</tr>
+<tr>
+<td>user[username]</td>
+<td>No</td>
+<td>The requested username (can be already taken).</td>
+</tr>
+<tr>
+<td>user[name]</td>
+<td>No</td>
+<td>The user&rsquo;s full name (first and last).</td>
 </tr>
 </tbody></table>
 <h2 id='reset-password-for-a-user'>Reset Password for a User</h2>
