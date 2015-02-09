@@ -44,18 +44,20 @@
       <div class="dark-box"></div>
       <div class="content">
         
-          <h1 id='introduction'>Introduction</h1>
+          <h1 id="introduction">Introduction</h1>
+
 <p>Welcome to the Code School API. You can use our API to access Code School API endpoints for Paths, Courses, and individual Users.</p>
 
-          <h1 id='authorization'>Authorization</h1>
+          <h1 id="authorization">Authorization</h1>
+
 <blockquote>
 <p>To authorize you&rsquo;ll need an OAuth token:</p>
 </blockquote>
-<pre class="highlight shell"><span class="c"># With shell, you can just pass the correct header with each request</span>
+<pre><code class="highlight shell"><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
 
-</pre>
+</code></pre>
 
 <blockquote>
 <p>Make sure to replace <code class="prettyprint">poopoopoo</code> with your OAuth API key.</p>
@@ -67,26 +69,29 @@ curl <span class="s2">"api_endpoint_here"</span>
 
 <p><code class="prettyprint">Authorization: OAuth poopoopoo</code></p>
 
-<p><aside class="notice">
-You must replace <code class="prettyprint">poopoopoo</code> with your personal API key.
-</aside></p>
+<aside class="notice">
+You must replace `poopoopoo` with your personal API key.
+</aside>
 
-          <h1 id='authentication'>Authentication</h1><h2 id='authenticate-a-user'>Authenticate a user</h2>
-<p><aside class="notice">
-You still need to send an <a href="#authorization"><code class="prettyprint">Authorization</code> header</a>
+          <h1 id="authentication">Authentication</h1>
+
+<h2 id="authenticate-a-user">Authenticate a user</h2>
+
+<aside class="notice">
+You still need to send an [`Authorization` header](#authorization)
 including an OAuth token when making requests to the Authentication API.
-</aside></p>
+</aside>
 
 <p>Given a user whose username is <code class="prettyprint">talonpowthesecond</code> and password is <code class="prettyprint">lololol</code>.</p>
-<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/authenticate"</span>
+<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/authenticate"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
   -d <span class="s2">"login=talonpowthesecond&amp;password=lololol"</span>
-</pre>
+</code></pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="p">{</span><span class="w">
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
   </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W3To8xgVLWa44ykvL6QisB0fvoP4fDEpJmAuFgwh"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
@@ -102,7 +107,7 @@ including an OAuth token when making requests to the Authentication API.
     </span><span class="s2">"paid_courses_access"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre>
+</span></code></pre>
 
 <p>This <code class="prettyprint">token</code> is an OAuth Token you can use to make queries on
 behalf of the user — for instance to the Course API in order to obtain
@@ -116,9 +121,13 @@ the following cases:
 <p>The purpose is to avoid leaking existing user emails and usernames through
 the API endpoint. That said, we currently leak this information through
 JavaScript validation on the website account sign up form.</p>
-<h3 id='http-request'>HTTP Request</h3>
+
+<h3 id="http-request">HTTP Request</h3>
+
 <p><code class="prettyprint">POST https://www.codeschool.com/api/v1/authentication</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -138,61 +147,74 @@ JavaScript validation on the website account sign up form.</p>
 </tr>
 </tbody></table>
 
-<p><aside class="warning">
-If you use an email address for the <code class="prettyprint">login</code> parameter, you need to URL
-encode it: <code class="prettyprint">salt+lick@yum.com</code> would become <code class="prettyprint">salt%2Blick%40yum.com</code>.
-</aside></p>
+<aside class="warning">
+If you use an email address for the `login` parameter, you need to URL
+encode it: `salt+lick@yum.com` would become `salt%2Blick%40yum.com`.
+</aside>
 
-          <h1 id='users'>Users</h1><h2 id='get-current-user'>Get current User</h2>
+          <h1 id="users">Users</h1>
+
+<h2 id="get-current-user">Get current User</h2>
+
 <p>Given a <code class="prettyprint">token</code> you obtain from using the Authentication endpoint,
 you can query the User endpoint in order to obtain data about this user.</p>
-<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/user"</span>
+<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/user"</span>
   -H <span class="s2">"Authorization: OAuth token_from_authentication_endpoint"</span>
-</pre>
+</code></pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="p">{</span><span class="w">
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
   </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"twitter_name"</span><span class="p">:</span><span class="w"> </span><span class="err">talonpowthesecond</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"twitter_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"talonpowthesecond"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Talon Powlowski II"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"saul@oberbrunnerbosco.net"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Retta1"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre>
+</span></code></pre>
 
 <p>This endpoint retrieves the current User.</p>
-<h3 id='http-request'>HTTP Request</h3>
+
+<h3 id="http-request">HTTP Request</h3>
+
 <p><code class="prettyprint">GET https://www.codeschool.com/api/v1/user</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
 <p>None.</p>
-<h2 id='user-sign-up'>User Sign Up</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users"</span>
+
+<h2 id="user-sign-up">User Sign Up</h2>
+<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
   -d <span class="s2">"user[email]=ada@lovelace.com&amp;[user]password=bernouli"</span>
-</pre>
+</code></pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="p">{</span><span class="w">
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
   </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span><span class="w">
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ada@lovelace.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"twitter_name"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"twitter_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ada@lovelace.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OAKCnKYoWP8amckAxHZ2KitlkRJQpLb0aV6YDHxI"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre>
+</span></code></pre>
 
 <p>This endpoint creates a User and returns it.</p>
-<h3 id='http-request'>HTTP Request</h3>
+
+<h3 id="http-request">HTTP Request</h3>
+
 <p><code class="prettyprint">POST https://www.codeschool.com/api/v1/users</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -221,32 +243,41 @@ you can query the User endpoint in order to obtain data about this user.</p>
 <td>The user&rsquo;s full name (first and last).</td>
 </tr>
 </tbody></table>
-<h2 id='reset-password-for-a-user'>Reset Password for a User</h2>
+
+<h2 id="reset-password-for-a-user">Reset Password for a User</h2>
+
 <p>Given a <code class="prettyprint">login</code> which could either be the user&rsquo;s <code class="prettyprint">username</code> or the
 <code class="prettyprint">email</code> address associated with their account.</p>
-<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users/&lt;login&gt;/reset_password"</span>
+<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users/&lt;login&gt;/reset_password"</span>
   -d
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
-</pre>
+</code></pre>
 
 <blockquote>
 <p>The above command doesn&rsquo;t return any body.</p>
 </blockquote>
 
 <p>This endpoint sends a reset password to a single User.</p>
-<h3 id='http-request'>HTTP Request</h3>
+
+<h3 id="http-request">HTTP Request</h3>
+
 <p><code class="prettyprint">POST https://www.codeschool.com/api/v1/users/&lt;username&gt;/reset_password</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
 <p>None.</p>
 
-          <h1 id='paths'>Paths</h1><h2 id='get-all-paths'>Get All Paths</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/paths.json"</span>
+          <h1 id="paths">Paths</h1>
+
+<h2 id="get-all-paths">Get All Paths</h2>
+<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/paths.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
-</pre>
+</code></pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="p">[</span><span class="w">
+<pre><code class="highlight json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ruby"</span><span class="p">,</span><span class="w">
@@ -266,27 +297,34 @@ you can query the User endpoint in order to obtain data about this user.</p>
   </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">}</span><span class="p">,</span><span class="w">
   </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></pre>
+</span></code></pre>
 
 <p>This endpoint retrieves all Paths.</p>
-<h3 id='http-request'>HTTP Request</h3>
+
+<h3 id="http-request">HTTP Request</h3>
+
 <p><code class="prettyprint">GET https://www.codeschool.com/api/v1/paths</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
 <p>None.</p>
 
-<p><aside class="notice">
+<aside class="notice">
 The Path endpoint doesn&rsquo;t return nested course data. You&rsquo;ll need to query the Courses endpoint using the course IDs
 that each Path returned.
-</aside></p>
+</aside>
 
-          <h1 id='courses'>Courses</h1><h2 id='get-all-courses'>Get All Courses</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/courses.json"</span>
+          <h1 id="courses">Courses</h1>
+
+<h2 id="get-all-courses">Get All Courses</h2>
+<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/courses.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
-</pre>
+</code></pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="p">[</span><span class="w">
+<pre><code class="highlight json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
     </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -314,7 +352,7 @@ that each Path returned.
         </span><span class="p">{</span><span class="w">
           </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aa93fd80"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
           </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
@@ -324,12 +362,12 @@ that each Path returned.
             </span><span class="p">},</span><span class="w">
             </span><span class="p">{</span><span class="w">
               </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/aa93fd80.mp4?profile=480p&amp;site=codeschool&amp;sso=TC0o8AIEhqUMnMk_BYpub84yvzrSEOPfh2RwtMyqQXySZck4h7Pe5JX8dDEqi9zdSmzHj7YJZF5ao-VMiCXieG2VNiSE-aD9dbE3dCeuSOd6LX2ykVcSmSgG5HVW3pBN"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
               </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="p">{</span><span class="w">
               </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/aa93fd80.webm?profile=WebM&amp;site=codeschool&amp;sso=TC0o8AIEhqUMnMk_BYpub84yvzrSEOPfh2RwtMyqQXySZck4h7Pe5JX8dDEqi9zdSmzHj7YJZF5ao-VMiCXieG2VNiSE-aD9dbE3dCeuSOd6LX2ykVcSmSgG5HVW3pBN"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
               </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">]</span><span class="w">
@@ -357,12 +395,16 @@ that each Path returned.
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></pre>
+</span></code></pre>
 
 <p>This endpoint retrieves all Courses.</p>
-<h3 id='http-request'>HTTP Request</h3>
+
+<h3 id="http-request">HTTP Request</h3>
+
 <p><code class="prettyprint">GET https://www.codeschool.com/api/v1/courses</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -377,7 +419,8 @@ that each Path returned.
 </tr>
 </tbody></table>
 
-          <h1 id='caching'>Caching</h1>
+          <h1 id="caching">Caching</h1>
+
 <p>Certain endpoints can returned cached responses for your client to avoid
 downloading the entire response again if it hasn&rsquo;t changed since you
 last requested it.</p>
@@ -395,16 +438,17 @@ if the response has not changed since your previous request:
 - <code class="prettyprint">If-Modified-Since</code>
 - <code class="prettyprint">If-None-Match</code></p>
 
-<p><aside class="warning"> The value returned inside the <code class="prettyprint">ETag</code> header is
+<aside class="warning"> The value returned inside the `ETag` header is
 a quoted string containing random numbers and letters (the entity tag).
-You <strong>must</strong> send it back as a quoted string within the <code class="prettyprint">If-None-Match</code>
+You **must** send it back as a quoted string within the `If-None-Match`
 request header for the conditional GET request to be valid.
-</aside></p>
+</aside>
 
 <p>You may send either (or both) of these conditional GET headers in order
 to attempt to receive a cached response.</p>
 
-          <h1 id='errors'>Errors</h1>
+          <h1 id="errors">Errors</h1>
+
 <p>The Code School API uses the following error codes:</p>
 
 <table><thead>
