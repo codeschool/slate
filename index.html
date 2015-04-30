@@ -44,20 +44,18 @@
       <div class="dark-box"></div>
       <div class="content">
         
-          <h1 id="introduction">Introduction</h1>
-
+          <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the Code School API. You can use our API to access Code School API endpoints for Paths, Courses, and individual Users.</p>
 
-          <h1 id="authorization">Authorization</h1>
-
+          <h1 id='authorization'>Authorization</h1>
 <blockquote>
 <p>To authorize you&rsquo;ll need an OAuth token:</p>
 </blockquote>
-<pre><code class="highlight shell"><span class="c"># With shell, you can just pass the correct header with each request</span>
+<pre class="highlight shell"><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
 
-</code></pre>
+</pre>
 
 <blockquote>
 <p>Make sure to replace <code class="prettyprint">poopoopoo</code> with your OAuth API key.</p>
@@ -69,29 +67,26 @@ curl <span class="s2">"api_endpoint_here"</span>
 
 <p><code class="prettyprint">Authorization: OAuth poopoopoo</code></p>
 
-<aside class="notice">
-You must replace `poopoopoo` with your personal API key.
-</aside>
+<p><aside class="notice">
+You must replace <code class="prettyprint">poopoopoo</code> with your personal API key.
+</aside></p>
 
-          <h1 id="authentication">Authentication</h1>
-
-<h2 id="authenticate-a-user">Authenticate a user</h2>
-
-<aside class="notice">
-You still need to send an [`Authorization` header](#authorization)
+          <h1 id='authentication'>Authentication</h1><h2 id='authenticate-a-user'>Authenticate a user</h2>
+<p><aside class="notice">
+You still need to send an <a href="#authorization"><code class="prettyprint">Authorization</code> header</a>
 including an OAuth token when making requests to the Authentication API.
-</aside>
+</aside></p>
 
 <p>Given a user whose username is <code class="prettyprint">talonpowthesecond</code> and password is <code class="prettyprint">lololol</code>.</p>
-<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/authenticate"</span>
+<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/authenticate"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
   -d <span class="s2">"login=talonpowthesecond&amp;password=lololol"</span>
-</code></pre>
+</pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre><code class="highlight json"><span class="p">{</span><span class="w">
+<pre class="highlight json"><span class="p">{</span><span class="w">
   </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W3To8xgVLWa44ykvL6QisB0fvoP4fDEpJmAuFgwh"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
@@ -107,7 +102,7 @@ including an OAuth token when making requests to the Authentication API.
     </span><span class="s2">"paid_courses_access"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></pre>
 
 <p>This <code class="prettyprint">token</code> is an OAuth Token you can use to make queries on
 behalf of the user — for instance to the Course API in order to obtain
@@ -121,13 +116,9 @@ the following cases:
 <p>The purpose is to avoid leaking existing user emails and usernames through
 the API endpoint. That said, we currently leak this information through
 JavaScript validation on the website account sign up form.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
+<h3 id='http-request'>HTTP Request</h3>
 <p><code class="prettyprint">POST https://www.codeschool.com/api/v1/authentication</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -147,25 +138,22 @@ JavaScript validation on the website account sign up form.</p>
 </tr>
 </tbody></table>
 
-<aside class="warning">
-If you use an email address for the `login` parameter, you need to URL
-encode it: `salt+lick@yum.com` would become `salt%2Blick%40yum.com`.
-</aside>
+<p><aside class="warning">
+If you use an email address for the <code class="prettyprint">login</code> parameter, you need to URL
+encode it: <code class="prettyprint">salt+lick@yum.com</code> would become <code class="prettyprint">salt%2Blick%40yum.com</code>.
+</aside></p>
 
-          <h1 id="users">Users</h1>
-
-<h2 id="get-current-user">Get current User</h2>
-
+          <h1 id='users'>Users</h1><h2 id='get-current-user'>Get current User</h2>
 <p>Given a <code class="prettyprint">token</code> you obtain from using the Authentication endpoint,
 you can query the User endpoint in order to obtain data about this user.</p>
-<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/user"</span>
+<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/user"</span>
   -H <span class="s2">"Authorization: OAuth token_from_authentication_endpoint"</span>
-</code></pre>
+</pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre><code class="highlight json"><span class="p">{</span><span class="w">
+<pre class="highlight json"><span class="p">{</span><span class="w">
   </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"twitter_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"talonpowthesecond"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Talon Powlowski II"</span><span class="p">,</span><span class="w">
@@ -174,47 +162,37 @@ you can query the User endpoint in order to obtain data about this user.</p>
     </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Retta1"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></pre>
 
 <p>This endpoint retrieves the current User.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
+<h3 id='http-request'>HTTP Request</h3>
 <p><code class="prettyprint">GET https://www.codeschool.com/api/v1/user</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
+<h3 id='query-parameters'>Query Parameters</h3>
 <p>None.</p>
-
-<h2 id="user-sign-up">User Sign Up</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users"</span>
+<h2 id='user-sign-up'>User Sign Up</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
   -d <span class="s2">"user[email]=ada@lovelace.com&amp;[user]password=bernouli"</span>
-</code></pre>
+</pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre><code class="highlight json"><span class="p">{</span><span class="w">
+<pre class="highlight json"><span class="p">{</span><span class="w">
   </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span><span class="w">
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ada@lovelace.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"twitter_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"twitter_name"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ada@lovelace.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OAKCnKYoWP8amckAxHZ2KitlkRJQpLb0aV6YDHxI"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></pre>
 
 <p>This endpoint creates a User and returns it.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
+<h3 id='http-request'>HTTP Request</h3>
 <p><code class="prettyprint">POST https://www.codeschool.com/api/v1/users</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -243,41 +221,32 @@ you can query the User endpoint in order to obtain data about this user.</p>
 <td>The user&rsquo;s full name (first and last).</td>
 </tr>
 </tbody></table>
-
-<h2 id="reset-password-for-a-user">Reset Password for a User</h2>
-
+<h2 id='reset-password-for-a-user'>Reset Password for a User</h2>
 <p>Given a <code class="prettyprint">login</code> which could either be the user&rsquo;s <code class="prettyprint">username</code> or the
 <code class="prettyprint">email</code> address associated with their account.</p>
-<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users/&lt;login&gt;/reset_password"</span>
+<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users/&lt;login&gt;/reset_password"</span>
   -d
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
-</code></pre>
+</pre>
 
 <blockquote>
 <p>The above command doesn&rsquo;t return any body.</p>
 </blockquote>
 
 <p>This endpoint sends a reset password to a single User.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
+<h3 id='http-request'>HTTP Request</h3>
 <p><code class="prettyprint">POST https://www.codeschool.com/api/v1/users/&lt;username&gt;/reset_password</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
+<h3 id='query-parameters'>Query Parameters</h3>
 <p>None.</p>
 
-          <h1 id="paths">Paths</h1>
-
-<h2 id="get-all-paths">Get All Paths</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/paths.json"</span>
+          <h1 id='paths'>Paths</h1><h2 id='get-all-paths'>Get All Paths</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/paths.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
-</code></pre>
+</pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre><code class="highlight json"><span class="p">[</span><span class="w">
+<pre class="highlight json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ruby"</span><span class="p">,</span><span class="w">
@@ -297,34 +266,27 @@ you can query the User endpoint in order to obtain data about this user.</p>
   </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">}</span><span class="p">,</span><span class="w">
   </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre>
+</span></pre>
 
 <p>This endpoint retrieves all Paths.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
+<h3 id='http-request'>HTTP Request</h3>
 <p><code class="prettyprint">GET https://www.codeschool.com/api/v1/paths</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
+<h3 id='query-parameters'>Query Parameters</h3>
 <p>None.</p>
 
-<aside class="notice">
+<p><aside class="notice">
 The Path endpoint doesn&rsquo;t return nested course data. You&rsquo;ll need to query the Courses endpoint using the course IDs
 that each Path returned.
-</aside>
+</aside></p>
 
-          <h1 id="courses">Courses</h1>
-
-<h2 id="get-all-courses">Get All Courses</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/courses.json"</span>
+          <h1 id='courses'>Courses</h1><h2 id='get-all-courses'>Get All Courses</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/courses.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
-</code></pre>
+</pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre><code class="highlight json"><span class="p">[</span><span class="w">
+<pre class="highlight json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
     </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -352,7 +314,7 @@ that each Path returned.
         </span><span class="p">{</span><span class="w">
           </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aa93fd80"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
           </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
           </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
@@ -362,12 +324,12 @@ that each Path returned.
             </span><span class="p">},</span><span class="w">
             </span><span class="p">{</span><span class="w">
               </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/aa93fd80.mp4?profile=480p&amp;site=codeschool&amp;sso=TC0o8AIEhqUMnMk_BYpub84yvzrSEOPfh2RwtMyqQXySZck4h7Pe5JX8dDEqi9zdSmzHj7YJZF5ao-VMiCXieG2VNiSE-aD9dbE3dCeuSOd6LX2ykVcSmSgG5HVW3pBN"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
               </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="p">{</span><span class="w">
               </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/aa93fd80.webm?profile=WebM&amp;site=codeschool&amp;sso=TC0o8AIEhqUMnMk_BYpub84yvzrSEOPfh2RwtMyqQXySZck4h7Pe5JX8dDEqi9zdSmzHj7YJZF5ao-VMiCXieG2VNiSE-aD9dbE3dCeuSOd6LX2ykVcSmSgG5HVW3pBN"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
               </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">]</span><span class="w">
@@ -395,16 +357,12 @@ that each Path returned.
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre>
+</span></pre>
 
 <p>This endpoint retrieves all Courses.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
+<h3 id='http-request'>HTTP Request</h3>
 <p><code class="prettyprint">GET https://www.codeschool.com/api/v1/courses</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -419,8 +377,7 @@ that each Path returned.
 </tr>
 </tbody></table>
 
-          <h1 id="caching">Caching</h1>
-
+          <h1 id='caching'>Caching</h1>
 <p>Certain endpoints can returned cached responses for your client to avoid
 downloading the entire response again if it hasn&rsquo;t changed since you
 last requested it.</p>
@@ -438,17 +395,16 @@ if the response has not changed since your previous request:
 - <code class="prettyprint">If-Modified-Since</code>
 - <code class="prettyprint">If-None-Match</code></p>
 
-<aside class="warning"> The value returned inside the `ETag` header is
+<p><aside class="warning"> The value returned inside the <code class="prettyprint">ETag</code> header is
 a quoted string containing random numbers and letters (the entity tag).
-You **must** send it back as a quoted string within the `If-None-Match`
+You <strong>must</strong> send it back as a quoted string within the <code class="prettyprint">If-None-Match</code>
 request header for the conditional GET request to be valid.
-</aside>
+</aside></p>
 
 <p>You may send either (or both) of these conditional GET headers in order
 to attempt to receive a cached response.</p>
 
-          <h1 id="errors">Errors</h1>
-
+          <h1 id='errors'>Errors</h1>
 <p>The Code School API uses the following error codes:</p>
 
 <table><thead>
@@ -492,6 +448,162 @@ to attempt to receive a cached response.</p>
 <td>503</td>
 <td>Service Unavailable</td>
 <td>We&rsquo;re temporarially offline for maintenance. Try again later.</td>
+</tr>
+</tbody></table>
+
+          <h1 id='courses-v2'>Courses (V2)</h1><h2 id='get-all-courses'>Get All Courses</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses.json"</span>
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jQuery Air: Captain's Log"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"short_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Introduce yourself to the most useful jQuery techniques. Soon to be discontinued."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"long_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Learn jQuery best practices &amp; useful techniques of jQuery's efficient JavaScript library. Let jQuery Air: Captain's Log help you make the most of your code."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"videos_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"level_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="mi">124</span><span class="p">,</span><span class="w">
+      </span><span class="mi">125</span><span class="p">,</span><span class="w">
+      </span><span class="mi">126</span><span class="p">,</span><span class="w">
+      </span><span class="mi">127</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"has_level_videos"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"credits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"- **Gregg Pollack** *Professors*\r\n- **Eric Allam** *Content Contributors*\r\n- **Drew Barontini** *Designers*\r\n- **Drew Barontini** *Front-end Development*\r\n- **Eric Allam** *Challenge Implementation*\r\n- **Less Films** *Video Production*"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"hero"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/images/courses/hero_thumb/7/jquery-air-captains-log-6a86bb1fcc843912dd59e96b418a89b9.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"large"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/images/courses/hero/7/jquery-air-captains-log-e7bdc37d16e57bb717bb5a8df238a490.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"theme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"light"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EFE3D0"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"badge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/images/achievements/small_badge/30/completed-jquery-air-captain-s-log-4c74a49096cad0262e4e5a5b30c7cb7f.png"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"large"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/images/achievements/large_badge/30/completed-jquery-air-captain-s-log-0f4b90723003d3c9c132ed6270298be5.png"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></pre>
+
+<p>This endpoint retrieves all Courses.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/courses</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>fake_release</td>
+<td>false</td>
+<td>If set to true, the result will include a fake release from yesterday and bust the cache. This is useful to test your interface for the event of a course release.</td>
+</tr>
+</tbody></table>
+<h2 id='level-videos'>Level Videos</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses/27/level_videos?level_number=4"</span>
+  -H <span class="s2">"Authorization: OAuth poopoopoo
+</span></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b69e8dcb"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Video"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/b69e8dcb.mp4?profile=720p&amp;site=codeschool&amp;sso=3p-gFOslNuF6GLD2QS7IF-S0RVSqdQCD5RJ3lM93g0LFQBQfKqpI8FDjIqFAF_BUFB9-i-m_qNO3770adF2CXImzTuWEMYfXcdQ6vI9mNoStC3isYzuNL12uuA5TT6P-"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/b69e8dcb.mp4?profile=480p&amp;site=codeschool&amp;sso=3p-gFOslNuF6GLD2QS7IF-S0RVSqdQCD5RJ3lM93g0LFQBQfKqpI8FDjIqFAF_BUFB9-i-m_qNO3770adF2CXImzTuWEMYfXcdQ6vI9mNoStC3isYzuNL12uuA5TT6P-"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/b69e8dcb.webm?profile=WebM&amp;site=codeschool&amp;sso=3p-gFOslNuF6GLD2QS7IF-S0RVSqdQCD5RJ3lM93g0LFQBQfKqpI8FDjIqFAF_BUFB9-i-m_qNO3770adF2CXImzTuWEMYfXcdQ6vI9mNoStC3isYzuNL12uuA5TT6P-"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a9804880"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Video"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/a9804880.mp4?profile=720p&amp;site=codeschool&amp;sso=goxLfxIRXixROwCGldFNuPcIftE8ibL8PGLd7o8UnMoua3he4djEq15_JynOGn86_v11pYXtYKZ6xd5OrcSFwoeF61IbXYRgW2tZ_rk-bKABJEJ624CO70c28_EP92XX"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/a9804880.mp4?profile=480p&amp;site=codeschool&amp;sso=goxLfxIRXixROwCGldFNuPcIftE8ibL8PGLd7o8UnMoua3he4djEq15_JynOGn86_v11pYXtYKZ6xd5OrcSFwoeF61IbXYRgW2tZ_rk-bKABJEJ624CO70c28_EP92XX"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/a9804880.webm?profile=WebM&amp;site=codeschool&amp;sso=goxLfxIRXixROwCGldFNuPcIftE8ibL8PGLd7o8UnMoua3he4djEq15_JynOGn86_v11pYXtYKZ6xd5OrcSFwoeF61IbXYRgW2tZ_rk-bKABJEJ624CO70c28_EP92XX"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5fe62c1e"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Video"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/5fe62c1e.mp4?profile=720p&amp;site=codeschool&amp;sso=8HEr0Zl7ATdit3miXhzAtIQt5R1bLQ6NUlP9kpfqt-K9MjfSmoF6aKF0UEXDPFJlX6XhuBguVN872zsZapkUoIqiPGQyfkCEc5MAdhPFL_T_w47UqI0bXVl8ZCdKk4VO"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/5fe62c1e.mp4?profile=480p&amp;site=codeschool&amp;sso=8HEr0Zl7ATdit3miXhzAtIQt5R1bLQ6NUlP9kpfqt-K9MjfSmoF6aKF0UEXDPFJlX6XhuBguVN872zsZapkUoIqiPGQyfkCEc5MAdhPFL_T_w47UqI0bXVl8ZCdKk4VO"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/5fe62c1e.webm?profile=WebM&amp;site=codeschool&amp;sso=8HEr0Zl7ATdit3miXhzAtIQt5R1bLQ6NUlP9kpfqt-K9MjfSmoF6aKF0UEXDPFJlX6XhuBguVN872zsZapkUoIqiPGQyfkCEc5MAdhPFL_T_w47UqI0bXVl8ZCdKk4VO"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></pre>
+
+<p>This endpoint retrieves information about the videos in a Course Level.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/courses/27/level_videos?level_number=4</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>level_number</td>
+<td><none></td>
+<td>Specifies the level for which information is requested.</td>
 </tr>
 </tbody></table>
 
