@@ -16,6 +16,7 @@ includes:
   - courses
   - caching
   - errors
+  - courses_v2
 
 search: true
 ---
