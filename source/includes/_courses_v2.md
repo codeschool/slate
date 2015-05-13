@@ -1,4 +1,4 @@
-# Courses (V2)
+# Courses (v2)
 
 ## Get All Courses
 
@@ -150,4 +150,5 @@ This endpoint retrieves information about the videos in a Course Level.
 
 Parameter | Default | Description
 --------- | ------- | -----------
-level_number | <none> | Specifies the level for which information is requested.
+level_number | none | Specifies the level for which information is requested.
+position | none | Specifies, by position, the video within the level for which information is requested
