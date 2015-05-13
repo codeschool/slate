@@ -451,7 +451,7 @@ to attempt to receive a cached response.</p>
 </tr>
 </tbody></table>
 
-          <h1 id='courses-v2'>Courses (V2)</h1><h2 id='get-all-courses'>Get All Courses</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses.json"</span>
+          <h1 id='courses-v2'>Courses (v2)</h1><h2 id='get-all-courses'>Get All Courses</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
 </pre>
 
@@ -602,8 +602,61 @@ to attempt to receive a cached response.</p>
 </thead><tbody>
 <tr>
 <td>level_number</td>
-<td><none></td>
+<td>none</td>
 <td>Specifies the level for which information is requested.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>none</td>
+<td>Specifies, by position, the video within the level for which information is requested</td>
+</tr>
+</tbody></table>
+
+          <h1 id='videos-v2'>Videos (v2)</h1><h2 id='get-all-videos'>Get All Videos</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses.json"</span>
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="s2">"videos"</span><span class="err">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">136</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pearson: Rails Tutorial - Part 2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">54</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Delayed Job"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rails Anatomy"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">}</span><span class="p">,</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></pre>
+
+<p>This endpoint retrieves all Videos</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/courses</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>show_id</td>
+<td>none</td>
+<td>Return only videos from the show (Code TV, Soup to Bits, Feature Focus) with this ID.</td>
 </tr>
 </tbody></table>
 
