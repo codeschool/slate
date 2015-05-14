@@ -33,7 +33,9 @@ curl "https://www.codeschool.com/api/v2/courses.json"
 ]
 ```
 
-This endpoint retrieves all Videos
+This endpoint returns information about videos from Code Tv,
+Feature Focus, and Soup to Bits (as opposed to information about the
+course level videos).
 
 ### HTTP Request
 
