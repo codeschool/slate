@@ -18,6 +18,7 @@ includes:
   - errors
   - courses_v2
   - videos_v2
+  - user_courses_v2
 
 search: true
 ---
