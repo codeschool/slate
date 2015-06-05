@@ -20,6 +20,7 @@ includes:
   - videos_v2
   - user_courses_v2
   - slide_documents_v2
+  - paths_v2
 
 search: true
 ---
