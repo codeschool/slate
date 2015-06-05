@@ -752,6 +752,44 @@ https://www.codeschool.com/api/v2/courses/[course_id]/slide_documents.json</code
 <h3 id='query-parameters'>Query Parameters</h3>
 <p>No parameters accepted</p>
 
+          <h1 id='paths-v2'>Paths (v2)</h1><h2 id='get-all-paths'>Get All Paths</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/paths.json"</span>
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path_subgroups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ruby is an expressive, dynamic programming language. Ruby on Rails is an open source web framework for building custom web applications.  The courses in this section get you quickly up to speed with the basics of the Ruby language and on track to building your first Rails application."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Getting Started with Ruby on Rails"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="err">...}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Master your Ruby skills and increase your Rails street cred by learning to build dynamic, sustainable applications for the web."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ruby"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="err">...}</span><span class="p">,</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></pre>
+
+<p>This endpoint retrieves all Paths.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/paths</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<p>None.</p>
+
+<p><aside class="notice">
+The Path endpoint doesn&rsquo;t return nested course data. You&rsquo;ll need to query the Courses endpoint using the course IDs
+that each Path returned.
+</aside></p>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
