@@ -38,3 +38,40 @@ This endpoint retrieves all Shows.
 ### Query Parameters
 
 None
+
+## Get a Show
+
+```shell
+curl "https://www.codeschool.com/api/v1/show/4.json"
+  -H "Authorization: OAuth poopoopoo"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "shows":
+      {
+        "id": 4,
+        "title": "Soup to Bits",
+        "description": "View practical steps for building applications following a Code School course. ",
+        "short_description": "View practical steps for building applications following a Code School course. ",
+        "brand_image": "https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg",
+        "title_image": "https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg",
+        "hero_background_color": "278998",
+        "number_videos": 13
+      },
+  }
+]
+```
+
+This endpoint retrieves a single Show.
+
+### HTTP Request
+
+`GET https://www.codeschool.com/api/v1/shows/4`
+
+### Query Parameters
+
+none
