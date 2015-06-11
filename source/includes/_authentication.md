@@ -10,7 +10,7 @@ including an OAuth token when making requests to the Authentication API.
 Given a user whose username is `talonpowthesecond` and password is `lololol`.
 
 ```shell
-curl "https://www.codeschool.com/api/v1/authenticate"
+curl "https://www.codeschool.com/api/v1/authentication"
   -H "Authorization: OAuth poopoopoo"
   -d "login=talonpowthesecond&password=lololol"
 ```
