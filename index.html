@@ -612,6 +612,38 @@ to attempt to receive a cached response.</p>
 </tr>
 </tbody></table>
 
+          <h1 id='shows-v2'>Shows (v2)</h1><h2 id='get-all-shows'>Get All Shows</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/shows.json"</span>
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"shows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Soup to Bits"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View practical steps for building applications following a Code School course. "</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"short_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View practical steps for building applications following a Code School course. "</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brand_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hero_background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"278998"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"number_videos"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="err">...}</span><span class="p">,</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></pre>
+
+<p>This endpoint retrieves all Shows.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/paths</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<p>None</p>
+
           <h1 id='videos-v2'>Videos (v2)</h1><h2 id='get-all-videos'>Get All Videos</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
 </pre>
@@ -625,18 +657,14 @@ to attempt to receive a cached response.</p>
     </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pearson: Rails Tutorial - Part 2"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">54</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Delayed Job"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rails Anatomy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w">
+    </span><span class="s2">"files"</span><span class="err">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/e0a1d1ba.mp4?profile=720p&amp;site=codeschool&amp;sso=3YCxuoMkA3r3TYVft226_FyE-3N8E5rbyWgaM6xjzB4y7Evxwh1lY4Rnh0kUtrtoWxtH3XIbjGzn-b3uOQ3NNReeK4MthlxyizeHyOjoUyBJsSPx3E0CBO1XbJyy997i"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="err">...}</span><span class="p">,</span><span class="w">
+    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">}</span><span class="p">,</span><span class="w">
 </span><span class="p">]</span><span class="w">
@@ -761,21 +789,29 @@ https://www.codeschool.com/api/v2/courses/[course_id]/slide_documents.json</code
 </blockquote>
 <pre class="highlight json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path_subgroups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"paths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ruby is an expressive, dynamic programming language. Ruby on Rails is an open source web framework for building custom web applications.  The courses in this section get you quickly up to speed with the basics of the Ruby language and on track to building your first Rails application."</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"path_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Getting Started with Ruby on Rails"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="err">...}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Master your Ruby skills and increase your Rails street cred by learning to build dynamic, sustainable applications for the web."</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ruby"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="err">...}</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path_subgroups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ruby is an expressive, dynamic programming language. Ruby on Rails is an open source web framework for building custom web applications.  The courses in this section get you quickly up to speed with the basics of the Ruby language and on track to building your first Rails application."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"icon_alt_text"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"icon_url"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Getting Started with Ruby on Rails"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+         </span><span class="p">{</span><span class="err">...}</span><span class="p">,</span><span class="w">
+       </span><span class="p">]</span><span class="w">
+       </span><span class="s2">"description"</span><span class="err">:</span><span class="w"> </span><span class="s2">"Master your Ruby skills and increase your Rails street cred by learning to build dynamic, sustainable applications for the web."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ruby"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@1x-cb0f0911e7bc96edf284b1463d175653.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@2x-b0644d07fa345aebdf9e2a05c7234e60.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@3x-5bffc4b95f92105a1d6c589310b7108f.png"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></pre>
 
