@@ -16,18 +16,14 @@ curl "https://www.codeschool.com/api/v2/courses.json"
     "path_id": 1,
     "title": "Pearson: Rails Tutorial - Part 2",
     "position": 16
-  },
-  {
-    "id": 54,
-    "path_id": 1,
-    "title": "Delayed Job",
-    "position": 2
-  },
-  {
-    "id": 23,
-    "path_id": 1,
-    "title": "Rails Anatomy",
-    "position": 15
+    "files": [
+      {
+        "url": "http://projector.codeschool.com/videos/e0a1d1ba.mp4?profile=720p&site=codeschool&sso=3YCxuoMkA3r3TYVft226_FyE-3N8E5rbyWgaM6xjzB4y7Evxwh1lY4Rnh0kUtrtoWxtH3XIbjGzn-b3uOQ3NNReeK4MthlxyizeHyOjoUyBJsSPx3E0CBO1XbJyy997i",
+        "quality": "hd",
+        "type": "video/mp4"
+      },
+      {...},
+    ]
   },
   { ... },
 ]
