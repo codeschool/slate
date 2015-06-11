@@ -643,6 +643,35 @@ to attempt to receive a cached response.</p>
 <p><code class="prettyprint">GET https://www.codeschool.com/api/v2/paths</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <p>None</p>
+<h2 id='get-a-show'>Get a Show</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/show/4.json"</span>
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"shows"</span><span class="p">:</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Soup to Bits"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View practical steps for building applications following a Code School course. "</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"short_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View practical steps for building applications following a Code School course. "</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brand_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hero_background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"278998"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"number_videos"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+  </span><span class="err">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></pre>
+
+<p>This endpoint retrieves a single Show.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v1/shows/4</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<p>none</p>
 
           <h1 id='videos-v2'>Videos (v2)</h1><h2 id='get-all-videos'>Get All Videos</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
