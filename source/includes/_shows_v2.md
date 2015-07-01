@@ -48,7 +48,7 @@ This endpoint retrieves all Shows.
 
 ### HTTP Request
 
-`GET https://www.codeschool.com/api/v2/paths`
+`GET https://www.codeschool.com/api/v2/shows`
 
 ### Query Parameters
 
