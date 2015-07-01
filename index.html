@@ -688,37 +688,48 @@ to attempt to receive a cached response.</p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <p>none</p>
 
-          <h1 id='videos-v2'>Videos (v2)</h1><h2 id='get-all-videos'>Get All Videos</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses.json"</span>
+          <h1 id='videos-v2'>Videos (v2)</h1><h2 id='get-all-videos'>Get All Videos</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/videos.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
 </pre>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="s2">"videos"</span><span class="err">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">136</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pearson: Rails Tutorial - Part 2"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="w">
-    </span><span class="s2">"files"</span><span class="err">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/e0a1d1ba.mp4?profile=720p&amp;site=codeschool&amp;sso=3YCxuoMkA3r3TYVft226_FyE-3N8E5rbyWgaM6xjzB4y7Evxwh1lY4Rnh0kUtrtoWxtH3XIbjGzn-b3uOQ3NNReeK4MthlxyizeHyOjoUyBJsSPx3E0CBO1XbJyy997i"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1e18edea"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"projector_video"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1e18edea"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"projectable_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"projectable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Video"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"show_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pearson: Rails Tutorial - Part 1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"path_icon_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@1x.png"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@2x.png"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@3x.png"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-07-05T16:53:23Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-05-07T16:58:06Z"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="err">...}</span><span class="p">,</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="err">}</span><span class="p">,</span><span class="w">
+      </span><span class="p">{</span><span class="err">...}</span><span class="w">
+</span><span class="err">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></pre>
 
-<p>This endpoint returns information about videos from Code Tv,
-Feature Focus, and Soup to Bits (as opposed to information about the
-course level videos).</p>
+<p>This endpoint returns information about videos from our screencasts (Code Tv,
+Feature Focus, and Soup to Bits)  URLs are not returned in this endpoint, use
+the single video endpoint to obtain them. This endpoint does not return course
+videos. Those can be obtained using <code class="prettyprint">/api/v2/courses</code></p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/courses</code></p>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/videos</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -733,6 +744,43 @@ course level videos).</p>
 <td>Return only videos from the show (Code TV, Soup to Bits, Feature Focus) with this ID.</td>
 </tr>
 </tbody></table>
+<h2 id='get-a-video'>Get a Video</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/videos.json"</span>
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"show_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pearson: Rails Tutorial - Part 1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"path_icon_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@1x-cb0f0911e7bc96edf284b1463d175653.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@2x-b0644d07fa345aebdf9e2a05c7234e60.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@3x-5bffc4b95f92105a1d6c589310b7108f.png"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/1e18edea.mp4?profile=720p&amp;site=codeschool&amp;sso=-pxoRRI-8pozhk1hBVlhNrRVvmK_1ftYcZBRHmtCSW3qeWCkEvRhZf7P3jWYOmZPSRVxeoYhvDCYELBcz3vDHJedOnVAHxL4h3HWH_RQFs9Pw_SVjJy_oJJXbjWafLJA"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="err">...</span><span class="w">
+</span><span class="err">}</span><span class="w">
+</span></pre>
+
+<p>This endpoint returns information about a single video from our screencasts
+(Code TV, Feature Focus, and Soup to Bits)</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/videos/&lt;video_id&gt;</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<p>None</p>
 
           <h1 id='user-courses-v2'>User Courses (v2)</h1><h2 id='get-all-usercourses-for-a-user'>Get All User::Courses for a User</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/users/&lt;user_id&gt;/courses.json
   -H "</span>Authorization: OAuth poopoopoo
