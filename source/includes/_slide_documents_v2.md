@@ -1,9 +1,9 @@
-# Course Slides (v2)
+# Slide Documents (v2)
 
 ## Get Slides for Course
 
 ```shell
-curl "https://www.codeschool.com/api/v2/courses/17/slide_documents.json
+curl "https://www.codeschool.com/api/v2/courses/8/slide_documents.json
   -H "Authorization: OAuth poopoopoo"
 ```
 
@@ -13,18 +13,12 @@ curl "https://www.codeschool.com/api/v2/courses/17/slide_documents.json
 {
   "slide_documents": [
     {
-      "course_id": 17,
-      "id": 1,
+      "id": 250,
       "name": null,
-      "remote_id": "assembling_sass_notes.pdf"
-    },
-    {
-      "course_id": 23,
-      "id": 1,
-      "name": null,
-      "remote_id": "git_real_notes.pdf"
-    },
-    {...}
+      "remote_id": "coffeescript.pdf",
+      "course_id": 8,
+      "remote_url": "http://projector.codeschool.com/documents/coffeescript.pdf?site=codeschool&sso=1OFN7JAlW7Tkm6vGXORwtDdFsB_s474J39AnKgxe3kz1uxQPkQlIGaCES20jj6h8GfdnUZiQUD3ZOF2cMvLm04u8s36MYrGAo32WCYuHg_cvNhgwCnX4nbpUl65yYWYV_VPsF1tGFEplHznHbI_iFA="
+    }
   ]
 }
 ```

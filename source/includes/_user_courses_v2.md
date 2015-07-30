@@ -10,32 +10,22 @@ curl "https://www.codeschool.com/api/v2/users/<user_id>/courses.json
 > The above command returns JSON structured like this:
 
 ```json
+{
   "user_courses": [
     {
-      "course_id": 16,
-      "progress": 0.0
-    },
-    {
-      "course_id": 152,
-      "progress": 0.0
-    },
-    {
-      "course_id": 22,
+      "course_id": 158,
       "progress": "100.0"
     },
     {
-      "course_id": 28,
+      "course_id": 24,
+      "progress": "0.0"
+    },
+    {
+      "course_id": 15,
       "progress": "100.0"
-    },
-    {
-      "course_id": 64,
-      "progress": "6.0"
-    },
-    {
-      "course_id": 17,
-      "progress": 0.0
-    },
-    {...},
+    }
+  ]
+}
 ```
 
 This endpoint returns information about user progress.

@@ -12,31 +12,52 @@ curl "https://www.codeschool.com/api/v2/videos.json"
 ```json
 {
   "videos": [
-      {
-        "id": 134,
-        "embed_id": "1e18edea",
-        "projector_video": {
-          "embed_id": "1e18edea",
-          "projectable_id": 134,
-          "projectable_type": "Video"
-        },
-        "show_id": 1,
-        "path_id": 1,
-        "title": "Pearson: Rails Tutorial - Part 1",
-        "position": 99,
-        "assets": {
-          "path_icon_url": {
-            "1x": "https://www.codeschool.com/assets/paths/icon-ruby@1x.png",
-            "2x": "https://www.codeschool.com/assets/paths/icon-ruby@2x.png",
-            "3x": "https://www.codeschool.com/assets/paths/icon-ruby@3x.png"
-          }
-        },
-        "created_at": "2013-07-05T16:53:23Z",
-        "updated_at": "2015-05-07T16:58:06Z"
+    {
+      "id": 36,
+      "embed_id": "ff2e847",
+      "projector_video": {
+        "embed_id": "ff2e847",
+        "projectable_id": 36,
+        "projectable_type": "Video"
       },
-      {...}
+      "show_id": 1,
+      "path_id": 5,
+      "title": "Intro to MVC",
+      "position": 132,
+      "assets": {
+        "path_icon_url": {
+          "1x": "https://www.codeschool.com/assets/paths/icon-electives@1x.png",
+          "2x": "https://www.codeschool.com/assets/paths/icon-electives@2x.png",
+          "3x": "https://www.codeschool.com/assets/paths/icon-electives@3x.png"
+        }
+      },
+      "created_at": "2012-06-14T08:39:05Z",
+      "updated_at": "2015-05-07T17:13:02Z"
+    },
+    {
+      "id": 39,
+      "embed_id": "5af62185",
+      "projector_video": {
+        "embed_id": "5af62185",
+        "projectable_id": 39,
+        "projectable_type": "Video"
+      },
+      "show_id": 1,
+      "path_id": 35,
+      "title": "Feature Branches & Pull Requests",
+      "position": 129,
+      "assets": {
+        "path_icon_url": {
+          "1x": "https://www.codeschool.com/assets/paths/icon-git@1x.png",
+          "2x": "https://www.codeschool.com/assets/paths/icon-git@2x.png",
+          "3x": "https://www.codeschool.com/assets/paths/icon-git@3x.png"
+        }
+      },
+      "created_at": "2012-08-08T23:14:02Z",
+      "updated_at": "2015-05-07T17:11:58Z"
+    },
+  ]
 }
-]
 ```
 
 This endpoint returns information about videos from our screencasts (Code Tv,
@@ -57,7 +78,7 @@ show_id   | none    | Return only videos from the show (Code TV, Soup to Bits, F
 ## Get a Video
 
 ```shell
-curl "https://www.codeschool.com/api/v2/videos.json"
+curl "https://www.codeschool.com/api/v2/videos/36.json"
   -H "Authorization: OAuth poopoopoo"
 ```
 
@@ -65,26 +86,27 @@ curl "https://www.codeschool.com/api/v2/videos.json"
 
 ```json
 {
-  "videos": [
-    {
-      "id": 134,
-      "show_id": 1,
-      "path_id": 1,
-      "title": "Pearson: Rails Tutorial - Part 1",
-      "position": 99,
-      "assets": {
-        "path_icon_url": {
-          "1x": "https://www.codeschool.com/assets/paths/icon-ruby@1x-cb0f0911e7bc96edf284b1463d175653.png",
-          "2x": "https://www.codeschool.com/assets/paths/icon-ruby@2x-b0644d07fa345aebdf9e2a05c7234e60.png",
-          "3x": "https://www.codeschool.com/assets/paths/icon-ruby@3x-5bffc4b95f92105a1d6c589310b7108f.png"
-        },
-        "files": [
-          {
-            "url": "http://projector.codeschool.com/videos/1e18edea.mp4?profile=720p&site=codeschool&sso=-pxoRRI-8pozhk1hBVlhNrRVvmK_1ftYcZBRHmtCSW3qeWCkEvRhZf7P3jWYOmZPSRVxeoYhvDCYELBcz3vDHJedOnVAHxL4h3HWH_RQFs9Pw_SVjJy_oJJXbjWafLJA",
-            "quality": "hd",
-            "type": "video/mp4"
-          },
-          ...
+  "videos": {
+    "embed_id": "ff2e847",
+    "name": "Intro to MVC",
+    "files": [
+      {
+        "url": "http://projector.codeschool.com/videos/ff2e847.mp4?profile=720p&site=codeschool&sso=5uwiJp_5_XFLGiK46VNlNyrKpzqk8iIkmogdTTP4McOwLUrPLGTpZ8T7pA3M5II3wPdAlLDjRH8MHQfQw-GvqZpSsb_Pb8GbNNHfzqo2hHyOk_Gr1Llar7_HXCzjySTA",
+        "quality": "hd",
+        "type": "video/mp4"
+      },
+      {
+        "url": "http://projector.codeschool.com/videos/ff2e847.mp4?profile=480p&site=codeschool&sso=5uwiJp_5_XFLGiK46VNlNyrKpzqk8iIkmogdTTP4McOwLUrPLGTpZ8T7pA3M5II3wPdAlLDjRH8MHQfQw-GvqZpSsb_Pb8GbNNHfzqo2hHyOk_Gr1Llar7_HXCzjySTA",
+        "quality": null,
+        "type": "video/mp4"
+      },
+      {
+        "url": "http://projector.codeschool.com/videos/ff2e847.webm?profile=WebM&site=codeschool&sso=5uwiJp_5_XFLGiK46VNlNyrKpzqk8iIkmogdTTP4McOwLUrPLGTpZ8T7pA3M5II3wPdAlLDjRH8MHQfQw-GvqZpSsb_Pb8GbNNHfzqo2hHyOk_Gr1Llar7_HXCzjySTA",
+        "quality": null,
+        "type": "video/webm"
+      }
+    ]
+  }
 }
 ```
 
@@ -93,7 +115,7 @@ This endpoint returns information about a single video from our screencasts
 
 ### HTTP Request
 
-`GET https://www.codeschool.com/api/v2/videos/<video_id>`
+`GET https://www.codeschool.com/api/v2/videos/<video_id>.json`
 
 ### Query Parameters
 
