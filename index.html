@@ -458,38 +458,60 @@ to attempt to receive a cached response.</p>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jQuery Air: Captain's Log"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"short_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Introduce yourself to the most useful jQuery techniques. Soon to be discontinued."</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"long_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Learn jQuery best practices &amp; useful techniques of jQuery's efficient JavaScript library. Let jQuery Air: Captain's Log help you make the most of your code."</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"videos_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"level_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="mi">124</span><span class="p">,</span><span class="w">
-      </span><span class="mi">125</span><span class="p">,</span><span class="w">
-      </span><span class="mi">126</span><span class="p">,</span><span class="w">
-      </span><span class="mi">127</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"has_level_videos"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"credits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"- **Gregg Pollack** *Professors*\r\n- **Eric Allam** *Content Contributors*\r\n- **Drew Barontini** *Designers*\r\n- **Drew Barontini** *Front-end Development*\r\n- **Eric Allam** *Challenge Implementation*\r\n- **Less Films** *Video Production*"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"hero"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/images/courses/hero_thumb/7/jquery-air-captains-log-6a86bb1fcc843912dd59e96b418a89b9.jpg"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"large"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/images/courses/hero/7/jquery-air-captains-log-e7bdc37d16e57bb717bb5a8df238a490.jpg"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"theme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"light"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EFE3D0"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"badge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/images/achievements/small_badge/30/completed-jquery-air-captain-s-log-4c74a49096cad0262e4e5a5b30c7cb7f.png"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"large"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/images/achievements/large_badge/30/completed-jquery-air-captain-s-log-0f4b90723003d3c9c132ed6270298be5.png"</span><span class="w">
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"courses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CSS Cross-Country"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"short_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Master the fundamentals and core foundations of CSS."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"long_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Learn the fundamentals &amp; foundational elements of CSS with CSS Cross-Country. Review all the web-styling necessities for front-end efficiency."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"videos_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"level_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">22</span><span class="p">,</span><span class="w">
+        </span><span class="mi">23</span><span class="p">,</span><span class="w">
+        </span><span class="mi">24</span><span class="p">,</span><span class="w">
+        </span><span class="mi">25</span><span class="p">,</span><span class="w">
+        </span><span class="mi">26</span><span class="p">,</span><span class="w">
+        </span><span class="mi">27</span><span class="p">,</span><span class="w">
+        </span><span class="mi">28</span><span class="p">,</span><span class="w">
+        </span><span class="mi">29</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"levels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Frost-Proof Fundamentals"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Adding style, selectors, the cascade, and floats"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"badge_image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/41/level-1-on-css-cross-country-96fb99da28e17edb7da62911777bf1d3.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"videos_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"projector_videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78e9c182"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"has_level_videos"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"hero"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d1ffx7ull4987f.cloudfront.net/images/courses/hero_thumb/9/css-cross-country-05a95971ef5437c4b14f8465a8d67881.jpg"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"large"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d1ffx7ull4987f.cloudfront.net/images/courses/hero/9/css-cross-country-780e5b2658971457c56cca36d28ed61b.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"theme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"light"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c4e3f3"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"badge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"small"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/40/completed-css-cross-country-4c128be261bb4fd465c8cbfa07178272.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"large"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/40/completed-css-cross-country-ec9a9aa14797031680577e7a986bef75.png"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-</span><span class="p">]</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></pre>
 
 <p>This endpoint retrieves all Courses.</p>
@@ -516,77 +538,33 @@ to attempt to receive a cached response.</p>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b69e8dcb"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Video"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/b69e8dcb.mp4?profile=720p&amp;site=codeschool&amp;sso=3p-gFOslNuF6GLD2QS7IF-S0RVSqdQCD5RJ3lM93g0LFQBQfKqpI8FDjIqFAF_BUFB9-i-m_qNO3770adF2CXImzTuWEMYfXcdQ6vI9mNoStC3isYzuNL12uuA5TT6P-"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/b69e8dcb.mp4?profile=480p&amp;site=codeschool&amp;sso=3p-gFOslNuF6GLD2QS7IF-S0RVSqdQCD5RJ3lM93g0LFQBQfKqpI8FDjIqFAF_BUFB9-i-m_qNO3770adF2CXImzTuWEMYfXcdQ6vI9mNoStC3isYzuNL12uuA5TT6P-"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/b69e8dcb.webm?profile=WebM&amp;site=codeschool&amp;sso=3p-gFOslNuF6GLD2QS7IF-S0RVSqdQCD5RJ3lM93g0LFQBQfKqpI8FDjIqFAF_BUFB9-i-m_qNO3770adF2CXImzTuWEMYfXcdQ6vI9mNoStC3isYzuNL12uuA5TT6P-"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a9804880"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Video"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/a9804880.mp4?profile=720p&amp;site=codeschool&amp;sso=goxLfxIRXixROwCGldFNuPcIftE8ibL8PGLd7o8UnMoua3he4djEq15_JynOGn86_v11pYXtYKZ6xd5OrcSFwoeF61IbXYRgW2tZ_rk-bKABJEJ624CO70c28_EP92XX"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/a9804880.mp4?profile=480p&amp;site=codeschool&amp;sso=goxLfxIRXixROwCGldFNuPcIftE8ibL8PGLd7o8UnMoua3he4djEq15_JynOGn86_v11pYXtYKZ6xd5OrcSFwoeF61IbXYRgW2tZ_rk-bKABJEJ624CO70c28_EP92XX"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/a9804880.webm?profile=WebM&amp;site=codeschool&amp;sso=goxLfxIRXixROwCGldFNuPcIftE8ibL8PGLd7o8UnMoua3he4djEq15_JynOGn86_v11pYXtYKZ6xd5OrcSFwoeF61IbXYRgW2tZ_rk-bKABJEJ624CO70c28_EP92XX"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5fe62c1e"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Video"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/5fe62c1e.mp4?profile=720p&amp;site=codeschool&amp;sso=8HEr0Zl7ATdit3miXhzAtIQt5R1bLQ6NUlP9kpfqt-K9MjfSmoF6aKF0UEXDPFJlX6XhuBguVN872zsZapkUoIqiPGQyfkCEc5MAdhPFL_T_w47UqI0bXVl8ZCdKk4VO"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/5fe62c1e.mp4?profile=480p&amp;site=codeschool&amp;sso=8HEr0Zl7ATdit3miXhzAtIQt5R1bLQ6NUlP9kpfqt-K9MjfSmoF6aKF0UEXDPFJlX6XhuBguVN872zsZapkUoIqiPGQyfkCEc5MAdhPFL_T_w47UqI0bXVl8ZCdKk4VO"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.dev/videos/5fe62c1e.webm?profile=WebM&amp;site=codeschool&amp;sso=8HEr0Zl7ATdit3miXhzAtIQt5R1bLQ6NUlP9kpfqt-K9MjfSmoF6aKF0UEXDPFJlX6XhuBguVN872zsZapkUoIqiPGQyfkCEc5MAdhPFL_T_w47UqI0bXVl8ZCdKk4VO"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"courses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d3f42067"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"accessible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/d3f42067.mp4?profile=720p&amp;site=codeschool&amp;sso=n3Oo5Gid5JKxCeY3dRXzBfDbRcjyqanjhVUEFuek89YVkxLXvz-AB5IDkzJmX1Qg03EG5Q58xNI3ZWKq0aGV68iPlRJKWztLWT2TwHmu4-doR5WirXkYgIu3_6UJmCJI"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/d3f42067.mp4?profile=480p&amp;site=codeschool&amp;sso=n3Oo5Gid5JKxCeY3dRXzBfDbRcjyqanjhVUEFuek89YVkxLXvz-AB5IDkzJmX1Qg03EG5Q58xNI3ZWKq0aGV68iPlRJKWztLWT2TwHmu4-doR5WirXkYgIu3_6UJmCJI"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/d3f42067.webm?profile=WebM&amp;site=codeschool&amp;sso=n3Oo5Gid5JKxCeY3dRXzBfDbRcjyqanjhVUEFuek89YVkxLXvz-AB5IDkzJmX1Qg03EG5Q58xNI3ZWKq0aGV68iPlRJKWztLWT2TwHmu4-doR5WirXkYgIu3_6UJmCJI"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></pre>
 
 <p>This endpoint retrieves information about the videos in a Course Level.</p>
@@ -601,14 +579,9 @@ to attempt to receive a cached response.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>level_number</td>
+<td>level_number (required)</td>
 <td>none</td>
 <td>Specifies the level for which information is requested.</td>
-</tr>
-<tr>
-<td>position</td>
-<td>none</td>
-<td>Specifies, by position, the video within the level for which information is requested</td>
 </tr>
 </tbody></table>
 
@@ -622,34 +595,34 @@ to attempt to receive a cached response.</p>
 <pre class="highlight json"><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"shows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Soup to Bits"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View practical steps for building applications following a Code School course. "</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"short_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View practical steps for building applications following a Code School course. "</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"brand_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"hero_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"hero_background_color"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">986</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"show_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"path_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HTML/CSS"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Soup to Bits: Unmasking HTML Emails"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"path_icon_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                  </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-html-css@1x.png"</span><span class="p">,</span><span class="w">
-                  </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-html-css@2x.png"</span><span class="p">,</span><span class="w">
-                  </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-html-css@3x.png"</span><span class="w">
-                </span><span class="p">}</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Soup to Bits"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View practical steps for building applications following a Code School course. "</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"short_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View practical steps for building applications following a Code School course. "</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"brand_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hero_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hero_background_color"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">997</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"show_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Electives"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Soup to Bits: The Sequel to SQL"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"path_icon_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-electives@1x.png"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-electives@2x.png"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-electives@3x.png"</span><span class="w">
               </span><span class="p">}</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="p">{</span><span class="err">...}</span><span class="w">
-          </span><span class="err">}</span><span class="p">,</span><span class="w">
-        </span><span class="p">{</span><span class="err">...}</span><span class="w">
-  </span><span class="err">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></pre>
 
@@ -677,8 +650,8 @@ to attempt to receive a cached response.</p>
         </span><span class="s2">"title_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/shows/brand-soup-to-bits-d9906658736cb6e0aa3cdc14a8448634.svg"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"hero_background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"278998"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"number_videos"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-  </span><span class="err">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></pre>
 
@@ -697,31 +670,52 @@ to attempt to receive a cached response.</p>
 </blockquote>
 <pre class="highlight json"><span class="p">{</span><span class="w">
   </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1e18edea"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"projector_video"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1e18edea"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"projectable_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"projectable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Video"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"show_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pearson: Rails Tutorial - Part 1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"path_icon_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@1x.png"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@2x.png"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@3x.png"</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2013-07-05T16:53:23Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-05-07T16:58:06Z"</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ff2e847"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"projector_video"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ff2e847"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"projectable_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"projectable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Video"</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="err">...}</span><span class="w">
-</span><span class="err">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+      </span><span class="s2">"show_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Intro to MVC"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">132</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"path_icon_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-electives@1x.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-electives@2x.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-electives@3x.png"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-06-14T08:39:05Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-05-07T17:13:02Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5af62185"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"projector_video"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5af62185"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"projectable_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"projectable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Video"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"show_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature Branches &amp; Pull Requests"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">129</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"path_icon_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-git@1x.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-git@2x.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-git@3x.png"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-08-08T23:14:02Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-05-07T17:11:58Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></pre>
 
 <p>This endpoint returns information about videos from our screencasts (Code Tv,
@@ -744,7 +738,7 @@ videos. Those can be obtained using <code class="prettyprint">/api/v2/courses</c
 <td>Return only videos from the show (Code TV, Soup to Bits, Feature Focus) with this ID.</td>
 </tr>
 </tbody></table>
-<h2 id='get-a-video'>Get a Video</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/videos.json"</span>
+<h2 id='get-a-video'>Get a Video</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/videos/36.json"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
 </pre>
 
@@ -752,33 +746,34 @@ videos. Those can be obtained using <code class="prettyprint">/api/v2/courses</c
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json"><span class="p">{</span><span class="w">
-  </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"show_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pearson: Rails Tutorial - Part 1"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"path_icon_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@1x-cb0f0911e7bc96edf284b1463d175653.png"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@2x-b0644d07fa345aebdf9e2a05c7234e60.png"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@3x-5bffc4b95f92105a1d6c589310b7108f.png"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/1e18edea.mp4?profile=720p&amp;site=codeschool&amp;sso=-pxoRRI-8pozhk1hBVlhNrRVvmK_1ftYcZBRHmtCSW3qeWCkEvRhZf7P3jWYOmZPSRVxeoYhvDCYELBcz3vDHJedOnVAHxL4h3HWH_RQFs9Pw_SVjJy_oJJXbjWafLJA"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
-          </span><span class="p">},</span><span class="w">
-          </span><span class="err">...</span><span class="w">
-</span><span class="err">}</span><span class="w">
+  </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ff2e847"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Intro to MVC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/ff2e847.mp4?profile=720p&amp;site=codeschool&amp;sso=5uwiJp_5_XFLGiK46VNlNyrKpzqk8iIkmogdTTP4McOwLUrPLGTpZ8T7pA3M5II3wPdAlLDjRH8MHQfQw-GvqZpSsb_Pb8GbNNHfzqo2hHyOk_Gr1Llar7_HXCzjySTA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/ff2e847.mp4?profile=480p&amp;site=codeschool&amp;sso=5uwiJp_5_XFLGiK46VNlNyrKpzqk8iIkmogdTTP4McOwLUrPLGTpZ8T7pA3M5II3wPdAlLDjRH8MHQfQw-GvqZpSsb_Pb8GbNNHfzqo2hHyOk_Gr1Llar7_HXCzjySTA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/ff2e847.webm?profile=WebM&amp;site=codeschool&amp;sso=5uwiJp_5_XFLGiK46VNlNyrKpzqk8iIkmogdTTP4McOwLUrPLGTpZ8T7pA3M5II3wPdAlLDjRH8MHQfQw-GvqZpSsb_Pb8GbNNHfzqo2hHyOk_Gr1Llar7_HXCzjySTA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/webm"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></pre>
 
 <p>This endpoint returns information about a single video from our screencasts
 (Code TV, Feature Focus, and Soup to Bits)</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/videos/&lt;video_id&gt;</code></p>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/videos/&lt;video_id&gt;.json</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <p>None</p>
 
@@ -789,32 +784,22 @@ videos. Those can be obtained using <code class="prettyprint">/api/v2/courses</c
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="w">  </span><span class="s2">"user_courses"</span><span class="err">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"user_courses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">152</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">158</span><span class="p">,</span><span class="w">
       </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.0"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
       </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.0"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.0"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="err">...}</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></pre>
 
 <p>This endpoint returns information about user progress.</p>
@@ -835,7 +820,7 @@ videos. Those can be obtained using <code class="prettyprint">/api/v2/courses</c
 </tr>
 </tbody></table>
 
-          <h1 id='course-slides-v2'>Course Slides (v2)</h1><h2 id='get-slides-for-course'>Get Slides for Course</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses/17/slide_documents.json
+          <h1 id='slide-documents-v2'>Slide Documents (v2)</h1><h2 id='get-slides-for-course'>Get Slides for Course</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses/8/slide_documents.json
   -H "</span>Authorization: OAuth poopoopoo<span class="s2">"
 </span></pre>
 
@@ -845,18 +830,12 @@ videos. Those can be obtained using <code class="prettyprint">/api/v2/courses</c
 <pre class="highlight json"><span class="p">{</span><span class="w">
   </span><span class="s2">"slide_documents"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w">
       </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"remote_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assembling_sass_notes.pdf"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"remote_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"git_real_notes.pdf"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="err">...}</span><span class="w">
+      </span><span class="s2">"remote_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"coffeescript.pdf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"course_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"remote_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/documents/coffeescript.pdf?site=codeschool&amp;sso=1OFN7JAlW7Tkm6vGXORwtDdFsB_s474J39AnKgxe3kz1uxQPkQlIGaCES20jj6h8GfdnUZiQUD3ZOF2cMvLm04u8s36MYrGAo32WCYuHg_cvNhgwCnX4nbpUl65yYWYV_VPsF1tGFEplHznHbI_iFA="</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre>
@@ -884,25 +863,54 @@ https://www.codeschool.com/api/v2/courses/[course_id]/slide_documents.json</code
     </span><span class="s2">"paths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ruby"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Master your Ruby skills and increase your Rails street cred by learning to build dynamic, sustainable applications for the web."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"course_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mi">6</span><span class="p">,</span><span class="w">
+          </span><span class="mi">18</span><span class="p">,</span><span class="w">
+          </span><span class="mi">5</span><span class="p">,</span><span class="w">
+          </span><span class="mi">28</span><span class="p">,</span><span class="w">
+          </span><span class="mi">101</span><span class="p">,</span><span class="w">
+          </span><span class="mi">108</span><span class="p">,</span><span class="w">
+          </span><span class="mi">10</span><span class="p">,</span><span class="w">
+          </span><span class="mi">2</span><span class="p">,</span><span class="w">
+          </span><span class="mi">14</span><span class="p">,</span><span class="w">
+          </span><span class="mi">20</span><span class="p">,</span><span class="w">
+          </span><span class="mi">22</span><span class="p">,</span><span class="w">
+          </span><span class="mi">1</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ruby"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"badge_urls"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"svg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/badge-ruby-a3ca50c1c68afbe5c766b36835a181d9.svg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"png"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/badge-ruby-59f7ecf395012b45e90e927d5e337786.png"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"icon_url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@1x-cb0f0911e7bc96edf284b1463d175653.png"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@2x-b0644d07fa345aebdf9e2a05c7234e60.png"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@3x-5bffc4b95f92105a1d6c589310b7108f.png"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"header_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d1ffx7ull4987f.cloudfront.net/images/paths/path_header/1/ruby-7d985ff0d7aade31a476c746938736d4.png"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"background_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#b24626"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
         </span><span class="s2">"path_subgroups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ruby is an expressive, dynamic programming language. Ruby on Rails is an open source web framework for building custom web applications.  The courses in this section get you quickly up to speed with the basics of the Ruby language and on track to building your first Rails application."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"icon_alt_text"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"icon_url"</span><span class="p">:</span><span class="w"> </span><span class="err">null</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Getting Started with Ruby on Rails"</span><span class="w">
+            </span><span class="s2">"subpath"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Getting Started With Ruby on Rails"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ruby is an expressive, dynamic programming language. Ruby on Rails is an open source web framework for building custom web applications.  The courses in this section get you quickly up to speed with the basics of the Ruby language and on track to building your first Rails application."</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"path_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"path_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"course_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="mi">6</span><span class="p">,</span><span class="w">
+                </span><span class="mi">18</span><span class="p">,</span><span class="w">
+                </span><span class="mi">5</span><span class="w">
+              </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
           </span><span class="p">},</span><span class="w">
-         </span><span class="p">{</span><span class="err">...}</span><span class="p">,</span><span class="w">
-       </span><span class="p">]</span><span class="w">
-       </span><span class="s2">"description"</span><span class="err">:</span><span class="w"> </span><span class="s2">"Master your Ruby skills and increase your Rails street cred by learning to build dynamic, sustainable applications for the web."</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ruby"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"1x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@1x-cb0f0911e7bc96edf284b1463d175653.png"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@2x-b0644d07fa345aebdf9e2a05c7234e60.png"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"3x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.codeschool.com/assets/paths/icon-ruby@3x-5bffc4b95f92105a1d6c589310b7108f.png"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></pre>
