@@ -531,6 +531,53 @@ to attempt to receive a cached response.</p>
 <td>If set to true, the result will include a fake release from yesterday and bust the cache. This is useful to test your interface for the event of a course release.</td>
 </tr>
 </tbody></table>
+<h2 id='get-single-course'>Get Single Course</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses.json"</span>
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"courses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">104</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"levels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">206</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Forest of Function Expressions"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Learn how to use and manipulate functions as expressions."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"projector_videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"embed_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15e218c3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://projector.codeschool.com/videos/15e218c3.mp4?profile=720p&amp;site=codeschool&amp;sso=3ebuCw-5u8SBqa3vPIhrVR7U33Cf3537E7BUKFKD9-Sy5IfGLQh_-ERTE1joWond4q3cvjfbTSHUsLQ0Z04UaW3EqBsYTwQsjT7Qnq_j2mv9RWBi76vrXzwB7VTI86CO"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"quality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hd"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video/mp4"</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre>
+
+<p>This endpoint retrieves a single Course.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v2/courses/&lt;course id&gt;.json</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p>n/a</p>
 <h2 id='level-videos'>Level Videos</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/courses/27/level_videos?level_number=4"</span>
   -H <span class="s2">"Authorization: OAuth poopoopoo
 </span></pre>
