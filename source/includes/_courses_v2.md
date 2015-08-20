@@ -78,6 +78,53 @@ Parameter | Default | Description
 --------- | ------- | -----------
 fake_release | false | If set to true, the result will include a fake release from yesterday and bust the cache. This is useful to test your interface for the event of a course release.
 
+## Get Single Course
+
+```shell
+curl "https://www.codeschool.com/api/v2/courses.json"
+  -H "Authorization: OAuth poopoopoo"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "courses": {
+    "id": 104,
+    "levels": [
+      {
+        "id": 206,
+        "title": "Forest of Function Expressions",
+        "description": "Learn how to use and manipulate functions as expressions.",
+        "projector_videos": [
+          {
+            "embed_id": "15e218c3",
+            "files": [
+              {
+                "url": "http://projector.codeschool.com/videos/15e218c3.mp4?profile=720p&site=codeschool&sso=3ebuCw-5u8SBqa3vPIhrVR7U33Cf3537E7BUKFKD9-Sy5IfGLQh_-ERTE1joWond4q3cvjfbTSHUsLQ0Z04UaW3EqBsYTwQsjT7Qnq_j2mv9RWBi76vrXzwB7VTI86CO",
+                "quality": "hd",
+                "type": "video/mp4"
+              },
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+This endpoint retrieves a single Course.
+
+### HTTP Request
+
+`GET https://www.codeschool.com/api/v2/courses/<course id>.json`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+n/a
 
 ## Level Videos
 
