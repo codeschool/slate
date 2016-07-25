@@ -835,6 +835,125 @@ videos. Those can be obtained using <code class="prettyprint">/api/v2/courses</c
 <h3 id='query-parameters'>Query Parameters</h3>
 <p>None</p>
 
+          <h1 id='users-v2'>Users (v2)</h1><h2 id='get-current-user'>Get current User</h2>
+<p>Given a <code class="prettyprint">token</code> you obtain from using the Authentication endpoint,
+you can query the User endpoint in order to obtain data about this user.</p>
+<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/user"</span>
+  -H <span class="s2">"Authorization: OAuth token_from_authentication_endpoint"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"olivier@codeschool.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"twitter_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"olivierlacan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Olivier Lacan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"olivierlacan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_score"</span><span class="p">:</span><span class="w"> </span><span class="mi">365250</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"completed_courses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="mi">160</span><span class="p">,</span><span class="w">
+      </span><span class="mi">8</span><span class="p">,</span><span class="w">
+      </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="err">#</span><span class="w"> </span><span class="err">etc.</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"completed_levels_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">149</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"watched_screencasts_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">163</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://gravatar.com/avatar/797569464d2fe9387739c169811d2d60.jpg?s=80&amp;r=pg&amp;d=http%3A%2F%2Fgravatar.com%2Favatar%2F1c02274fedcce55a289172bfb8db25ab.jpg%3Fs%3D80%26r%3Dpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OAKCnKYoWP8amckAxHZ2KitlkRJQpLb0aV6YDHxI"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paid_courses_access"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre>
+
+<p>This endpoint retrieves the current User.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">GET https://www.codeschool.com/api/v1/user</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<p>None.</p>
+<h2 id='user-sign-up'>User Sign Up</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users"</span>
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+  -d <span class="s2">"user[email]=ada@lovelace.com&amp;[user]password=bernouli"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"olivier@codeschool.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"twitter_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"olivierlacan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Olivier Lacan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"olivierlacan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_score"</span><span class="p">:</span><span class="w"> </span><span class="mi">365250</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"completed_courses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="mi">160</span><span class="p">,</span><span class="w">
+      </span><span class="mi">8</span><span class="p">,</span><span class="w">
+      </span><span class="mi">4</span><span class="p">,</span><span class="w">
+      </span><span class="err">#</span><span class="w"> </span><span class="err">etc.</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"completed_levels_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">149</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"watched_screencasts_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">163</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://gravatar.com/avatar/797569464d2fe9387739c169811d2d60.jpg?s=80&amp;r=pg&amp;d=http%3A%2F%2Fgravatar.com%2Favatar%2F1c02274fedcce55a289172bfb8db25ab.jpg%3Fs%3D80%26r%3Dpg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OAKCnKYoWP8amckAxHZ2KitlkRJQpLb0aV6YDHxI"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paid_courses_access"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre>
+
+<p>This endpoint creates a User and returns it.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">POST https://www.codeschool.com/api/v1/users</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user[email]</td>
+<td>Yes</td>
+<td>The prospective user&rsquo;s email address.</td>
+</tr>
+<tr>
+<td>user[password]</td>
+<td>Yes</td>
+<td>The requested password (must be longer than 6 characters).</td>
+</tr>
+<tr>
+<td>user[username]</td>
+<td>No</td>
+<td>The requested username (can be already taken).</td>
+</tr>
+<tr>
+<td>user[name]</td>
+<td>No</td>
+<td>The user&rsquo;s full name (first and last).</td>
+</tr>
+</tbody></table>
+<h2 id='reset-password-for-a-user'>Reset Password for a User</h2>
+<p>Given a <code class="prettyprint">login</code> which could either be the user&rsquo;s <code class="prettyprint">username</code> or the
+<code class="prettyprint">email</code> address associated with their account.</p>
+<pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v1/users/&lt;login&gt;/reset_password"</span>
+  -d
+  -H <span class="s2">"Authorization: OAuth poopoopoo"</span>
+</pre>
+
+<blockquote>
+<p>The above command doesn&rsquo;t return any body.</p>
+</blockquote>
+
+<p>This endpoint sends a reset password to a single User.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code class="prettyprint">POST https://www.codeschool.com/api/v1/users/&lt;username&gt;/reset_password</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<p>None.</p>
+
           <h1 id='user-courses-v2'>User Courses (v2)</h1><h2 id='get-all-usercourses-for-a-user'>Get All User::Courses for a User</h2><pre class="highlight shell">curl <span class="s2">"https://www.codeschool.com/api/v2/users/&lt;user_id&gt;/courses.json
   -H "</span>Authorization: OAuth poopoopoo
 </pre>
