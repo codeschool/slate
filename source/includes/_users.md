@@ -14,11 +14,17 @@ curl "https://www.codeschool.com/api/v1/user"
 ```json
 {
   "user": {
-    "twitter_name": "talonpowthesecond",
-    "name": "Talon Powlowski II",
-    "id": 4,
-    "email": "saul@oberbrunnerbosco.net",
-    "username": "Retta1"
+    "id": 33,
+    "email": "olivier@codeschool.com",
+    "twitter_name": "olivierlacan",
+    "name": "Olivier Lacan",
+    "username": "olivierlacan",
+    "total_score": 365250,
+    "completed_levels_count": 149,
+    "watched_screencasts_count": 163,
+    "avatar": "http://gravatar.com/avatar/797569464d2fe9387739c169811d2d60.jpg?s=80&r=pg&d=http%3A%2F%2Fgravatar.com%2Favatar%2F1c02274fedcce55a289172bfb8db25ab.jpg%3Fs%3D80%26r%3Dpg",
+    "token": "OAKCnKYoWP8amckAxHZ2KitlkRJQpLb0aV6YDHxI",
+    "paid_courses_access": true
   }
 }
 ```
@@ -45,12 +51,17 @@ curl "https://www.codeschool.com/api/v1/users"
 ```json
 {
   "user": {
-    "id": 47,
-    "email": "ada@lovelace.com",
-    "twitter_name": null,
-    "name": "ada@lovelace.com",
-    "username": null,
-    "token": "OAKCnKYoWP8amckAxHZ2KitlkRJQpLb0aV6YDHxI"
+    "id": 33,
+    "email": "olivier@codeschool.com",
+    "twitter_name": "olivierlacan",
+    "name": "Olivier Lacan",
+    "username": "olivierlacan",
+    "total_score": 365250,
+    "completed_levels_count": 149,
+    "watched_screencasts_count": 163,
+    "avatar": "http://gravatar.com/avatar/797569464d2fe9387739c169811d2d60.jpg?s=80&r=pg&d=http%3A%2F%2Fgravatar.com%2Favatar%2F1c02274fedcce55a289172bfb8db25ab.jpg%3Fs%3D80%26r%3Dpg",
+    "token": "OAKCnKYoWP8amckAxHZ2KitlkRJQpLb0aV6YDHxI",
+    "paid_courses_access": true
   }
 }
 ```
