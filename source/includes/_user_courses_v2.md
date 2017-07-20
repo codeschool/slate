@@ -4,7 +4,7 @@
 
 ```shell
 curl "https://www.codeschool.com/api/v2/users/<user_id>/courses.json
-  -H "Authorization: OAuth poopoopoo
+  -H "Authorization: OAuth thisisyouroauthtoken
 ```
 
 > The above command returns JSON structured like this:

@@ -4,7 +4,7 @@
 
 ```shell
 curl "https://www.codeschool.com/api/v2/videos.json"
-  -H "Authorization: OAuth poopoopoo"
+  -H "Authorization: OAuth thisisyouroauthtoken"
 ```
 
 > The above command returns JSON structured like this:
@@ -79,7 +79,7 @@ show_id   | none    | Return only videos from the show (Code TV, Soup to Bits, F
 
 ```shell
 curl "https://www.codeschool.com/api/v2/videos/36.json"
-  -H "Authorization: OAuth poopoopoo"
+  -H "Authorization: OAuth thisisyouroauthtoken"
 ```
 
 > The above command returns JSON structured like this:

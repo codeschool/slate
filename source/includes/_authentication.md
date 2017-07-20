@@ -11,7 +11,7 @@ Given a user whose username is `talonpowthesecond` and password is `lololol`.
 
 ```shell
 curl "https://www.codeschool.com/api/v1/authentication"
-  -H "Authorization: OAuth poopoopoo"
+  -H "Authorization: OAuth thisisyouroauthtoken"
   -d "login=talonpowthesecond&password=lololol"
 ```
 

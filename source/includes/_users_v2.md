@@ -49,7 +49,7 @@ None.
 
 ```shell
 curl "https://www.codeschool.com/api/v1/users"
-  -H "Authorization: OAuth poopoopoo"
+  -H "Authorization: OAuth thisisyouroauthtoken"
   -d "user[email]=ada@lovelace.com&[user]password=bernouli"
 ```
 > The above command returns JSON structured like this:
@@ -101,7 +101,7 @@ Given a `login` which could either be the user's `username` or the
 ```shell
 curl "https://www.codeschool.com/api/v1/users/<login>/reset_password"
   -d
-  -H "Authorization: OAuth poopoopoo"
+  -H "Authorization: OAuth thisisyouroauthtoken"
 ```
 > The above command doesn't return any body.
 

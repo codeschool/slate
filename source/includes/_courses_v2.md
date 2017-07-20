@@ -4,7 +4,7 @@
 
 ```shell
 curl "https://www.codeschool.com/api/v2/courses.json"
-  -H "Authorization: OAuth poopoopoo"
+  -H "Authorization: OAuth thisisyouroauthtoken"
 ```
 
 > The above command returns JSON structured like this:
@@ -82,7 +82,7 @@ fake_release | false | If set to true, the result will include a fake release fr
 
 ```shell
 curl "https://www.codeschool.com/api/v2/courses.json"
-  -H "Authorization: OAuth poopoopoo"
+  -H "Authorization: OAuth thisisyouroauthtoken"
 ```
 
 > The above command returns JSON structured like this:
@@ -130,7 +130,7 @@ n/a
 
 ```shell
 curl "https://www.codeschool.com/api/v2/courses/27/level_videos?level_number=4"
-  -H "Authorization: OAuth poopoopoo
+  -H "Authorization: OAuth thisisyouroauthtoken
 ```
 
 > The above command returns JSON structured like this:
